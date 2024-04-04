@@ -1,0 +1,17 @@
+.todoContainer {
+    border: 5px solid red;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.itemName{
+    font-weight: 500;
+    color: white;
+}
+
+hr{
+    color: red !important;
+}
+.markDoneBtn{
+    float: right;
+}
