@@ -1,11 +1,23 @@
+import { useState } from "react";
 import "./App.css";
 import TodoList from "./TodoList";
 
 function App() {
-  let items = ["Book a Cab", "Submit Docs"];
+  const [items, setItems] = useState(["Book a Cab", "Submit Docs"]);
+
+  const submitForm = (e) => {
+    if (e) {
+      setItems((curr) => {
+        console.log(curr);
+        return [...items, e];
+      });
+    } else {
+      alert("enter any task");
+    }
+  };
   return (
     <>
-      <TodoList listItems={items}></TodoList>
+      <TodoList listItems={items} submitForm={(e) => submitForm(e)}></TodoList>
     </>
   );
 }
