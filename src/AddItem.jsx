@@ -6,6 +6,7 @@ const AddItem = ({ submitForm }) => {
   const handleSubmit = (value) => {
     event.preventDefault();
     submitForm(value);
+    itemElem.current.value = "";
   };
   return (
     <>
